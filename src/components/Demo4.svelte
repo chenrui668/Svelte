@@ -1,7 +1,8 @@
 <script>
-    const fetchData = () => new Promise(resolve => {
+    const fetchData = () => new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve('加载完成')
+            // reject('加载失败')
         }, 1000);
     })
 </script>
@@ -11,4 +12,6 @@
     <div>加载中...</div>    
 {:then res} 
     <div>{res}</div>
+{:catch err}
+    <div style="color: red">{err}</div>
 {/await}
