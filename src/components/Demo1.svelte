@@ -1,4 +1,5 @@
 <script>
+    import { flip } from 'svelte/animate'
     let text
     let list = []
 
@@ -16,8 +17,8 @@
     <input bind:value={text} />
     <button class="btn" on:click="{onAdd}">添加</button>
 </div>
-{#each list as item, index}
-    <div class="row">
+{#each list as item, index (item)}
+    <div class="row" animate:flip>
         <div class="text">{item}</div>
         <button class="btn" on:click="{() => onDelete(index)}">删除</button>
     </div>

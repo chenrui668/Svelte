@@ -1,10 +1,5 @@
 <script>
-    import { globalValue } from './store'
     export let value = ''
-    let gv = ''
-    globalValue.subscribe(v => {
-        gv = v
-    })
 </script>
 
 <div>
@@ -12,8 +7,4 @@
     <div>
         <input bind:value={value}/>
     </div>
-    <!-- store:
-    <div>
-        {gv}
-    </div> -->
 </div>

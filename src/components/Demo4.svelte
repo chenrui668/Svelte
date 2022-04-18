@@ -11,7 +11,7 @@
 {#await fetchData()}
     <div>加载中...</div>    
 {:then res} 
-    <div>{res}</div>
+    <div style="color: blue">{res}</div>
 {:catch err}
     <div style="color: red">{err}</div>
 {/await}

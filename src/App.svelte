@@ -3,8 +3,9 @@
 	import Demo2 from "./components/Demo2.svelte";
 	import Demo3 from "./components/Demo3.svelte";
 	import Demo4 from "./components/Demo4.svelte";
+	import Demo5 from "./components/Demo5.svelte";
 
-	const demos = [ Demo1, Demo2, Demo3, Demo4 ]
+	const demos = [ Demo1, Demo2, Demo3, Demo4, Demo5 ]
 	let currentIndex = 0
 	$: Component = demos[currentIndex]
 	// $: {
